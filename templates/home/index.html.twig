@@ -1,0 +1,109 @@
+{% extends 'base.html.twig' %} {% block title %}Accueil{% endblock %} {% block
+body %}
+<body
+  style="background-image:url({{
+    asset('image/universe.jpg')
+  }}); background-size:cover;)"
+>
+  <div class="container">
+    <div class="row">
+      <hr><hr>
+      <h1 class="text-center text-primary">Bienvenue</h1>
+
+      <hr><hr>
+
+      <div>
+        <img 
+        src="{{asset('image/solarSystem.webp')}}"
+        class="d-block w-100"
+        alt="hythrthnr" />
+      </div>
+      
+      {# DEBUT CAROUSEL #}
+      {# <div
+        id="carouselExampleControls"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{{asset('image/solarSystem.webp')}}" class="d-block w-100" style="height:30rem" alt="système solaire" />
+          </div>
+          <div class="carousel-item">
+            <img src="{{asset('image/solarSystem.jpg')}}" class="d-block w-100" style="height:30rem" alt="système solaire" />
+          </div>
+          <div class="carousel-item">
+            <img src="{{asset('image/solarSystem.png')}}" class="d-block w-100" style="height:30rem" alt="système solaire" />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div> #}
+      {# FIN CAROUSEL #}
+
+      <hr/><hr>
+
+      {# DEBUT PREMIER #}
+      <div class="row">
+        <h2 class="text-center text-primary">Définition du système solaire</h2><hr>
+
+        <p class="col-md-7 text-success">
+          Le Système solaire (avec majuscule), ou système solaire (sans majuscule), est le système planétaire du Soleil, auquel appartient la Terre. Il est composé de cette étoile et des objets célestes gravitant autour d'elle : les huit planètes confirmées et leurs 214 satellites naturels connus (appelés usuellement des "lunes"), les cinq planètes naines et leurs neuf satellites connus, ainsi que des milliards de petits corps (la presque totalité des astéroïdes et autres planètes mineures, les comètes, les poussières cosmiques, etc.).<br><br>Le système solaire fait partie de la galaxie appelée Voie lactée, où il réside dans le bras d'Orion. Il est situé à environ 8 kpc (∼26 100 a.l.) du centre galactique, autour duquel il effectue une révolution en 225 à 250 millions d'années. Il s'est formé il y a un peu moins de 4,6 milliards d'années à partir de l'effondrement gravitationnel d'un nuage moléculaire, suivi de la constitution d'un disque protoplanétaire selon l'hypothèse de la nébuleuse.
+        </p>
+
+        <img
+          class="col-md-5"
+          src="{{asset('image/surfaceMars.jpg')}}"
+          alt="Surface de la planète Mars"
+        />
+      </div>
+      {# FIN PREMIER #}
+
+      <hr><hr>
+
+      {# DEBUT DEUXIEME #}
+        <div class="row">
+            <h2 class="text-center text-primary">Composition du système solaire</h2><hr>
+
+        <img
+          class="col-md-5"
+          src="{{asset('image/jupiterAndCo.jpg')}}"
+          alt="Jupiter et compagnie"
+        />
+
+          <p class="col-md-7 text-success">
+            De façon schématique, le système solaire est composé du Soleil, qui le domine gravitationnellement, il comprend 99,85 % de sa masse, et fournit de l'énergie par fusion nucléaire de l'hydrogène en hélium. Par ordre d'éloignement croissant à l'étoile, le Système solaire interne comprend quatre planètes telluriques internes, principalement composées de roches et de métaux (Mercure, Vénus, la Terre et Mars) puis une ceinture d'astéroïdes de petits corps rocheux, dont la planète naine Cérès. Plus loin orbitent les quatre planètes géantes du système solaire externe : successivement deux géantes gazeuses constituées majoritairement d'hydrogène et d'hélium que sont Jupiter et Saturne, qui contiennent par ailleurs la grande majorité de la masse totale en orbite autour du Soleil, et deux géantes de glaces que sont Uranus et Neptune, contenant une plus grande part de substances volatiles comme l'eau, l'ammoniac et le méthane. Tous ont une orbite proche du cercle et sont concentrés près du plan de l'écliptique, le plan de rotation de la Terre.<br><br>Les objets situés au-delà de l'orbite de Neptune, dits transneptuniens, comprennent notamment la ceinture de Kuiper et le disque des objets épars, formés d'objets glacés. Quatre planètes naines glacées se trouvent dans la région transneptunienne et sont également appelées plutoïdes : Pluton (auparavant classée comme planète), Hauméa, Makémaké et Éris. L'héliopause, limite magnétique du système solaire, est définie par l'arrêt des vents solaires face aux vents du milieu interstellaire à une centaine d'unités astronomiques, tandis que la limite gravitationnelle du système solaire se situe bien plus loin encore, jusqu'à une ou deux années-lumière du Soleil, vers laquelle une zone sphérique hypothétique, le nuage de Oort, pourrait exister et être la source des comètes à longue période.
+          </p>
+      </div>
+      {# FIN DEUXIEME #}
+
+      <hr><hr>
+
+      <iframe 
+        width="100%" 
+        height="550" 
+        src="https://www.youtube.com/embed/H4P2Rqd17kk" title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</body>
+<br>
+{% endblock %}

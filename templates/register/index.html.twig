@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscrivez-vous{% endblock %}
+
+{% block body %}
+    <body style="background:url({{asset('image/electricity.jpg')}}); background-size:cover; background-repeat:no-repeat;)">
+        <br><br><br>
+        <div class="container inscription">
+            <h2 class="text-center text-white"><strong>Inscription</strong></h2>
+
+            <div class="col md-6 mx-auto">
+                {{form(registerForm)}}
+            </div>
+        </div>
+    </body>
+{% endblock %}
