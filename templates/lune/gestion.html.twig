@@ -1,0 +1,246 @@
+{% extends 'base.html.twig' %} {% block title %}Gérer les planètes{%
+endblock %} {% block body %}
+<section>
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+
+        <th scope="col">Nom</th>
+        <th scope="col">Planète</th>
+        <th scope="col">Découvreur</th>
+        <th scope="col">Date</th>
+        <th scope="col">Photo</th>
+        <th scope="col">Supprimer</th>
+        <th scope="col">Modifier</th>
+      </tr>
+    </thead>
+
+    <tbody>
+    {# GESTION DE LUNE #}
+      {% for lune in lune %}
+      <tr>
+        <td scop="row">{{ lune.id }}</td>
+        <td>{{ lune.nom }}</td>
+        <td>{{ lune.planete }}</td>
+        <td>{{ lune.decouvreur }}</td>
+        <td>{{ lune.date }}</td>
+
+        <td>
+          <img style="width: 120px; height:120px" src="{{asset('uploads/photo/' ~ lune.photo)}}" />
+        </td>
+
+        <td>
+            <a 
+                class="btn btn-danger" 
+                href="{{ path('app_lune_delete',{id: lune.id}) }}" 
+                onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce satellite ?')"
+                >Supprimer</a
+            >
+        </td>
+
+        <td>
+          <a
+            class="btn btn-success"
+            href="{{ path('app_lune_edit', { id: lune.id }) }}"
+            >Modifier</a
+          >
+        </td>
+      </tr>
+      {% endfor %}
+
+    {# GESTION DE MARS #}
+      {% for mars in mars %}
+      <tr>
+        <td scop="row">{{ mars.id }}</td>
+        <td>{{ mars.nom }}</td>
+        <td>{{ mars.planete }}</td>
+        <td>{{ mars.decouvreur }}</td>
+        <td>{{ mars.date }}</td>
+
+        <td>
+          <img style="width: 120px; height:120px" src="{{asset('uploads/photo/' ~ mars.photo)}}" />
+        </td>
+
+        <td>
+            <a 
+                class="btn btn-danger" 
+                href="{{ path('app_mars_delete',{id: mars.id}) }}" 
+                onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce satellite ?')"
+                >Supprimer</a
+            >
+        </td>
+
+        <td>
+          <a
+            class="btn btn-success"
+            href="{{ path('app_mars_edit', { id: mars.id }) }}"
+            >Modifier</a
+          >
+        </td>
+      </tr>
+      {% endfor %}
+
+    {# GESTION DE JUPITER #}
+      {% for jupiter in jupiter %}
+      <tr>
+        <td scop="row">{{ jupiter.id }}</td>
+        <td>{{ jupiter.nom }}</td>
+        <td>{{ jupiter.planete }}</td>
+        <td>{{ jupiter.decouvreur }}</td>
+        <td>{{ jupiter.date }}</td>
+
+        <td>
+          <img style="width: 120px; height:120px" src="{{asset('uploads/photo/' ~ jupiter.photo)}}" />
+        </td>
+
+        <td>
+            <a 
+                class="btn btn-danger" 
+                href="{{ path('app_jupiter_delete',{id: jupiter.id}) }}" 
+                onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce satellite ?')"
+                >Supprimer</a
+            >
+        </td>
+
+        <td>
+          <a
+            class="btn btn-success"
+            href="{{ path('app_jupiter_edit', { id: jupiter.id }) }}"
+            >Modifier</a
+          >
+        </td>
+      </tr>
+      {% endfor %}
+
+    {# GESTION DE SATURNE #}
+      {% for saturne in saturne %}
+      <tr>
+        <td scop="row">{{ saturne.id }}</td>
+        <td>{{ saturne.nom }}</td>
+        <td>{{ saturne.planete }}</td>
+        <td style="width:10rem">{{ saturne.decouvreur }}</td>
+        <td>{{ saturne.date }}</td>
+
+        <td>
+          <img style="width: 120px; height:120px" src="{{asset('uploads/photo/' ~ saturne.photo)}}" />
+        </td>
+
+        <td>
+            <a 
+                class="btn btn-danger" 
+                href="{{ path('app_saturne_delete',{id: saturne.id}) }}" 
+                onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce satellite ?')"
+                >Supprimer</a
+            >
+        </td>
+
+        <td>
+          <a
+            class="btn btn-success"
+            href="{{ path('app_saturne_edit', { id: saturne.id }) }}"
+            >Modifier</a
+          >
+        </td>
+      </tr>
+      {% endfor %}
+
+    {# GESTION D'URANUS #}
+      {% for uranus in uranus %}
+      <tr>
+        <td scop="row">{{ uranus.id }}</td>
+        <td>{{ uranus.nom }}</td>
+        <td>{{ uranus.planete }}</td>
+        <td>{{ uranus.decouvreur }}</td>
+        <td>{{ uranus.date }}</td>
+
+        <td>
+          <img style="width: 120px; height:120px" src="{{asset('uploads/photo/' ~ uranus.photo)}}" />
+        </td>
+
+        <td>
+            <a 
+                class="btn btn-danger" 
+                href="{{ path('app_uranus_delete',{id: uranus.id}) }}" 
+                onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce satellite ?')"
+                >Supprimer</a
+            >
+        </td>
+
+        <td>
+          <a
+            class="btn btn-success"
+            href="{{ path('app_uranus_edit', { id: uranus.id }) }}"
+            >Modifier</a
+          >
+        </td>
+      </tr>
+      {% endfor %}
+
+    {# GESTION DE NEPTUNE #}
+      {% for neptune in neptune %}
+      <tr>
+        <td scop="row">{{ neptune.id }}</td>
+        <td>{{ neptune.nom }}</td>
+        <td>{{ neptune.planete }}</td>
+        <td>{{ neptune.decouvreur }}</td>
+        <td>{{ neptune.date }}</td>
+
+        <td>
+          <img style="width: 120px; height:120px" src="{{asset('uploads/photo/' ~ neptune.photo)}}" />
+        </td>
+
+        <td>
+            <a 
+                class="btn btn-danger" 
+                href="{{ path('app_neptune_delete',{id: neptune.id}) }}" 
+                onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce satellite ?')"
+                >Supprimer</a
+            >
+        </td>
+
+        <td>
+          <a
+            class="btn btn-success"
+            href="{{ path('app_neptune_edit', { id: neptune.id }) }}"
+            >Modifier</a
+          >
+        </td>
+      </tr>
+      {% endfor %}
+
+    {# GESTION DE CHARON #}
+      {% for charon in charon %}
+      <tr>
+        <td scop="row">{{ charon.id }}</td>
+        <td>{{ charon.nom }}</td>
+        <td>{{ charon.planete }}</td>
+        <td>{{ charon.decouvreur }}</td>
+        <td>{{ charon.date }}</td>
+
+        <td>
+          <img style="width: 120px; height:120px" src="{{asset('uploads/photo/' ~ charon.photo)}}" />
+        </td>
+
+        <td>
+            <a 
+                class="btn btn-danger" 
+                href="{{ path('app_charon_delete',{id: charon.id}) }}" 
+                onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce satellite ?')"
+                >Supprimer</a
+            >
+        </td>
+
+        <td>
+          <a
+            class="btn btn-success"
+            href="{{ path('app_charon_edit', { id: charon.id }) }}"
+            >Modifier</a
+          >
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endblock %}

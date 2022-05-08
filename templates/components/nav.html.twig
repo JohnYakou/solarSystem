@@ -11,11 +11,11 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Planètes du système solaire</a>
+          <a class="nav-link" href="{{path('app_all_planets')}}">Planètes du système solaire</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Principaux satellites naturels</a>
+          <a class="nav-link" href="{{path('app_all_moons')}}">Principaux satellites naturels</a>
         </li>
 
         {# SEUL L'ADMIN PEUT VOIR CI-DESSOUS #}
@@ -25,9 +25,36 @@
             Admin
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Gestion</a></li>
+            <li><a class="dropdown-item" href="{{path('app_rocheuse')}}">Ajouter une planète rocheuse</a></li>
+
+            <li><a class="dropdown-item" href="{{path('app_gazeuse')}}">Ajouter une planète gazeuse</a></li>
+
+            <li><a class="dropdown-item" href="{{path('app_pluton')}}">Ajouter Pluton</a></li>
+
             <li><hr class="dropdown-divider"></li>
+
+            <li><a class="dropdown-item" href="{{path('app_lune')}}">Ajouter un satellite de la Terre</a></li>
+
+            <li><a class="dropdown-item" href="{{path('app_mars')}}">Ajouter un satellite de Mars</a></li>
+
+            <li><a class="dropdown-item" href="{{path('app_jupiter')}}">Ajouter un satellite de Jupiter</a></li>
+
+            <li><a class="dropdown-item" href="{{path('app_saturne')}}">Ajouter un satellite de Saturne</a></li>
+
+            <li><a class="dropdown-item" href="{{path('app_uranus')}}">Ajouter un satellite d'Uranus</a></li>
+
+            <li><a class="dropdown-item" href="{{path('app_neptune')}}">Ajouter un satellite de Neptune</a></li>
+
+            <li><a class="dropdown-item" href="{{path('app_charon')}}">Ajouter un satellite de Pluton</a></li>
+
+            <li><hr class="dropdown-divider"></li>
+
+            <li><a class="dropdown-item" href="{{path('app_admin_all_planets')}}">Gestion des planètes</a></li>
+
+            <li><a class="dropdown-item" href="{{path('app_admin_all_moons')}}">Gestion des lunes</a></li>
+            
+            <li><hr class="dropdown-divider"></li>
+
             <li><a class="dropdown-item" href="{{path('app_logout')}}">Déconnexion</a></li>
           </ul>
         </li>

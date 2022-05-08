@@ -15,3 +15,157 @@ hr{
     background: #2090a1cd;
     border-radius: 1rem;
 }
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* templates > rocheuse > allPlanets.html.twig */
+/* COULEUR CARD-ROCHEUSE */
+.card-rocheuse:nth-child(1){
+    background: #d0a16e;
+}
+
+.card-rocheuse:nth-child(2){
+    background: #a8541b;
+}
+
+.card-rocheuse:nth-child(3){
+    background:#001537 ;
+}
+
+.card-rocheuse:nth-child(4){
+    background:#df7b49 ;
+}
+
+/* COULEUR CARD-GAZEUSE */
+.card-gazeuse:nth-child(1){
+    background:#eba474 ;
+}
+
+.card-gazeuse:nth-child(2){
+    background:#c3a065 ;
+}
+
+.card-gazeuse:nth-child(3){
+    background:#7ac1cb ;
+}
+
+.card-gazeuse:nth-child(4){
+    background:#446afb ;
+}
+
+/* COULEUR CARD-PLUTON */
+.card-pluton{
+    background:#c7bcaa ;
+}
+
+/* templates > lune > allMoons.html.twig */
+/* COULEUR CARD-LUNE */
+.card-lune{
+    background:#3d3c3a;
+}
+
+/* COULEURS CARD-MARS */
+.card-mars:nth-child(1){
+    background: #897c72;
+}
+
+.card-mars:nth-child(2){
+    background: #dbb994;
+}
+
+/* COULEURS CARD-JUPITER */
+.card-jupiter:nth-child(1){
+    background: #f0e164;
+}
+
+.card-jupiter:nth-child(2){
+    background: #773f21;
+}
+
+.card-jupiter:nth-child(3){
+    background: #b6ae9e;
+}
+
+.card-jupiter:nth-child(4){
+    background: #5c5450;
+}
+
+/* COULEURS CARD-SATURNE */
+.card-saturne:nth-child(1){
+    background: #8e8e8e;
+}
+
+.card-saturne:nth-child(2){
+    background: #769096;
+}
+
+.card-saturne:nth-child(3){
+    background: #dedede;
+}
+
+.card-saturne:nth-child(4){
+    background: #7d7d7d;
+}
+
+.card-saturne:nth-child(5){
+    background: #e8e8e8;
+}
+
+.card-saturne:nth-child(6){
+    background: #e2cd66;
+}
+
+.card-saturne:nth-child(7){
+    background: #4b4645;
+}
+
+.card-saturne:nth-child(8){
+    background: #373213;
+}
+
+.card-saturne:nth-child(9){
+    background: #5c5c5c;
+}
+
+/* COULEURS CARD-URANUS */
+.card-uranus:nth-child(1){
+    background: #292929;
+    /* color: white; */
+}
+
+.card-uranus:nth-child(2){
+    background: #bbbbbb;
+}
+
+.card-uranus:nth-child(3){
+    background:#4f839c;
+}
+
+.card-uranus:nth-child(4){
+    background: #85807b;
+}
+
+.card-uranus:nth-child(5){
+    background:#c9bdad;
+}
+
+.card-uranus:nth-child(6){
+    background: #a39089;
+}
+
+/* COULEURS CARD-NEPTUNE */
+.card-neptune:nth-child(1){
+    background: #b1a0a8;
+}
+
+.card-neptune:nth-child(2){
+    background: #c3c5c4;
+}
+
+/* COULEURS CARD-CHARON */
+.card-charon{
+    background: #986548;
+}

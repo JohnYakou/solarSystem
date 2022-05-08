@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Uranus{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row pt-5">
+            <h2 class="text-center">Ajouter un satellite d'Uranus</h2>
+
+            <div class="col md-12 mx-auto">
+                {{form(uranusForm)}}
+            </div>
+        </div>
+    </div>
+{% endblock %}

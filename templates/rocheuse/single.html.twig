@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{rocheuse.nom}}{% endblock %}
+
+{% block body %}
+<h1 class="text-center text-danger">{{rocheuse.nom}}</h1>
+
+<div class="container">
+
+  <div class="card mb-3">
+    <img src="{{asset('uploads/photo/' ~ rocheuse.photo)}}" class="card-img-top"/>
+
+    <div class="card-body">
+      <h5 class="card-title text-center">Superficie : {{rocheuse.superficie}}</h5>
+      <h3 class="text-center">Description</h3>
+      <p class="card-text">{{rocheuse.description}}</p>
+    </div>
+  </div>
+{% endblock %}

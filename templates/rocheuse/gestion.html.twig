@@ -1,0 +1,108 @@
+{% extends 'base.html.twig' %} {% block title %}Gérer les planètes{%
+endblock %} {% block body %}
+<section>
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+
+        <th scope="col">Nom</th>
+        <th scope="col">Superficie</th>
+        <th scope="col">Photo</th>
+        <th scope="col">Supprimer</th>
+        <th scope="col">Modifier</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for rocheuse in rocheuse %}
+      <tr>
+        <td scop="row">{{ rocheuse.id }}</td>
+        <td>{{ rocheuse.nom }}</td>
+        <td>{{ rocheuse.superficie }}</td>
+
+        <td>
+          <img style="width: 120px; height:120px" src="{{asset('uploads/photo/' ~ rocheuse.photo)}}" />
+        </td>
+
+        <td>
+            <a 
+                class="btn btn-danger" 
+                href="{{ path('app_rocheuse_delete',{id: rocheuse.id}) }}" 
+                onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette planète ?')"
+                >Supprimer</a
+            >
+        </td>
+
+        <td>
+          <a
+            class="btn btn-success"
+            href="{{ path('app_rocheuse_edit', { id: rocheuse.id }) }}"
+            >Modifier</a
+          >
+        </td>
+      </tr>
+      {% endfor %}
+
+      {% for gazeuse in gazeuse %}
+      <tr>
+        <td scop="row">{{ gazeuse.id }}</td>
+        <td>{{ gazeuse.nom }}</td>
+        <td>{{ gazeuse.superficie }}</td>
+
+        <td>
+          <img style="width: 120px; height:120px" src="{{asset('uploads/photo/' ~ gazeuse.photo)}}" />
+        </td>
+
+        <td>
+            <a 
+                class="btn btn-danger" 
+                href="{{ path('app_gazeuse_delete',{id: gazeuse.id}) }}" 
+                onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette planète ?')"
+                >Supprimer</a
+            >
+        </td>
+
+        <td>
+          <a
+            class="btn btn-success"
+            href="{{ path('app_gazeuse_edit', { id: gazeuse.id }) }}"
+            >Modifier</a
+          >
+        </td>
+      </tr>
+      {% endfor %}
+
+    {# GESTION DE PLUTON #}
+      {% for pluton in pluton %}
+      <tr>
+        <td scop="row">{{ pluton.id }}</td>
+        <td>{{ pluton.nom }}</td>
+        <td>{{ pluton.superficie }}</td>
+
+        <td>
+          <img style="width: 120px; height:120px" src="{{asset('uploads/photo/' ~ pluton.photo)}}" />
+        </td>
+
+        <td>
+            <a 
+                class="btn btn-danger" 
+                href="{{ path('app_pluton_delete',{id: pluton.id}) }}" 
+                onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette planète ?')"
+                >Supprimer</a
+            >
+        </td>
+
+        <td>
+          <a
+            class="btn btn-success"
+            href="{{ path('app_pluton_edit', { id: pluton.id }) }}"
+            >Modifier</a
+          >
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endblock %}

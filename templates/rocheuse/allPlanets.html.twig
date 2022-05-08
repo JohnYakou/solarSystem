@@ -1,0 +1,139 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Planètes du système solaire{% endblock %}
+
+{% block body %}
+<body style="background-image:url({{asset('image/space.webp')}}); background-size:cover;)">
+    <div class='container'>
+        <br><br>
+
+        <h1 class="text-center text-white">Les planètes du système solaire</h1>
+
+        {# BOUTONS #}
+        <div class="d-flex justify-content-around">
+            <a type="button" class="btn btn-success m-5" href="#roche">Planètes rocheuses</a>
+            <a type="button" class="btn btn-success m-5" href="#gaz">Planètes gazeuses</a>
+            <a type="button" class="btn btn-success m-5" href="#pluton">Anciennes planètes</a>
+        </div>
+
+        {# DEBUT PLANETES ROCHEUSES #}
+        <h2 id="roche" class="text-center text-white">Les planètes rocheuses</h2>
+
+        <div class="row">
+            {% for rocheuse in rocheuse %}
+                <div class="card col-md-5 mx-1 mt-5 card-rocheuse" style="width:25rem">
+                    <img class="card-img-top my-3" style="height:350px" src="{{asset('uploads/photo/' ~ rocheuse.photo)}}">
+
+                    <div class="card-body">
+                        <h5 class="text-center card-title text-muted"><strong>{{rocheuse.nom}}</strong></h5>
+
+                        <a class="btn btn-primary text-center d-flex justify-content-evenly" href="{{path('app_single_rocheuse', {id:rocheuse.id})}}">En savoir plus</a>
+                    </div>
+
+                    {# EDIT ET DELETE #}
+                    {% if is_granted ("ROLE_ADMIN") %}
+                        <div class="d-flex p-3 justify-content-evenly">
+
+                            <a 
+                            class="btn btn-danger" 
+                            href="{{ path('app_rocheuse_delete',{id: rocheuse.id}) }}" 
+                            onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette planète ?')"
+                            >Supprimer</a
+                            >
+
+                            <a
+                            href="{{ path('app_rocheuse_edit', { id: rocheuse.id }) }}"
+                            class="btn btn-warning"
+                            >Modifier</a
+                            >
+                        </div>
+                    {% endif %}
+                    {# FIN EDIT ET DELETE #}
+                </div>
+            {% endfor %}
+        </div>
+        {# FIN PLANETES ROCHEUSES #}
+
+        <br><br>
+
+        {# DEBUT PLANETES GAZEUSES #}
+        <h2 id="gaz" class="text-center text-white">Les planètes gazeuses</h2>
+
+        <div class="row">
+            {% for gazeuse in gazeuse %}
+                <div class="card col-md-5 mx-1 mt-5 card-gazeuse" style="width:25rem">
+                    <img class="card-img-top my-3" style="height:350px" src="{{asset('uploads/photo/' ~ gazeuse.photo)}}">
+
+                    <div class="card-body">
+                        <h5 class="text-center card-title text-muted"><strong>{{gazeuse.nom}}</strong></h5>
+
+                        <a class="btn btn-primary text-center d-flex justify-content-evenly" href="{{path('app_single_gazeuse', {id:gazeuse.id})}}">En savoir plus</a>
+                    </div>
+
+                    {# EDIT ET DELETE #}
+                    {% if is_granted ("ROLE_ADMIN") %}
+                        <div class="d-flex p-3 justify-content-evenly">
+
+                            <a 
+                            class="btn btn-danger" 
+                            href="{{ path('app_gazeuse_delete',{id: gazeuse.id}) }}" 
+                            onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette planète ?')"
+                            >Supprimer</a
+                            >
+
+                            <a
+                            href="{{ path('app_gazeuse_edit', { id: gazeuse.id }) }}"
+                            class="btn btn-warning"
+                            >Modifier</a
+                            >
+                        </div>
+                    {% endif %}
+                    {# FIN EDIT ET DELETE #}
+                </div>
+            {% endfor %}
+        </div>
+        {# FIN PLANETES GAZEUSES #}
+
+        <br><br>
+
+        {# DEBUT PLUTON #}
+        <h2 id="pluton" class="text-center text-white">Les anciennes planètes</h2>
+
+        <div class="row">
+            {% for pluton in pluton %}
+                <div class="card col-md-5 mx-1 mt-5 card-pluton" style="width:25rem">
+                    <img class="card-img-top my-3" style="height:350px" src="{{asset('uploads/photo/' ~ pluton.photo)}}">
+
+                    <div class="card-body">
+                        <h5 class="text-center card-title text-muted"><strong>{{pluton.nom}}</strong></h5>
+
+                        <a class="btn btn-primary text-center d-flex justify-content-evenly" href="{{path('app_single_pluton', {id:pluton.id})}}">En savoir plus</a>
+                    </div>
+
+                    {# EDIT ET DELETE #}
+                    {% if is_granted ("ROLE_ADMIN") %}
+                        <div class="d-flex p-3 justify-content-evenly">
+
+                            <a 
+                            class="btn btn-danger" 
+                            href="{{ path('app_pluton_delete',{id: pluton.id}) }}" 
+                            onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette planète ?')"
+                            >Supprimer</a
+                            >
+
+                            <a
+                            href="{{ path('app_pluton_edit', { id: pluton.id }) }}"
+                            class="btn btn-warning"
+                            >Modifier</a
+                            >
+                        </div>
+                    {% endif %}
+                    {# FIN EDIT ET DELETE #}
+                </div>
+            {% endfor %}
+        </div>
+        {# FIN PLUTON #}
+    </div>
+</body>
+    <br>
+{% endblock %}

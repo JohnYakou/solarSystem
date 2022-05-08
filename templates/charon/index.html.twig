@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pluton{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row pt-5">
+            <h2 class="text-center">Ajouter un satellite de Pluton</h2>
+
+            <div class="col md-12 mx-auto">
+                {{form(charonForm)}}
+            </div>
+        </div>
+    </div>
+{% endblock %}
