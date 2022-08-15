@@ -1,6 +1,7 @@
 .nav-link{
     color: white;
     font-weight: bold;
+    color: #f1d329;
 }
 
 .nav-link:hover{
@@ -32,7 +33,7 @@ hr{
 }
 
 .card-rocheuse:nth-child(3){
-    background:#001537 ;
+    background:#365384 ;
 }
 
 .card-rocheuse:nth-child(4){
@@ -64,7 +65,7 @@ hr{
 /* templates > lune > allMoons.html.twig */
 /* COULEUR CARD-LUNE */
 .card-lune{
-    background:#3d3c3a;
+    background:#8b8883;
 }
 
 /* COULEURS CARD-MARS */
@@ -123,7 +124,7 @@ hr{
 }
 
 .card-saturne:nth-child(8){
-    background: #373213;
+    background: #c5c4b9;
 }
 
 .card-saturne:nth-child(9){
@@ -132,8 +133,7 @@ hr{
 
 /* COULEURS CARD-URANUS */
 .card-uranus:nth-child(1){
-    background: #292929;
-    /* color: white; */
+    background: #6a6a6a;
 }
 
 .card-uranus:nth-child(2){
