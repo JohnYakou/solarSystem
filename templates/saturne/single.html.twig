@@ -3,19 +3,25 @@
 {% block title %}{{saturne.nom}}{% endblock %}
 
 {% block body %}
-<h1 class="text-center text-danger">{{saturne.nom}}</h1>
+  <section style="background-image:url({{asset('image/soloUniverse.jpg')}}); background-size:cover;">
 
-<div class="container">
+    <br>
 
-  <div class="card mb-3">
-    <img src="{{asset('uploads/photo/' ~ saturne.photo)}}" class="card-img-top"/>
+    <h1 class="text-center text-danger">{{saturne.nom}}</h1>
 
-    <div class="card-body">
-      <h5 class="card-title text-center">Planète : {{saturne.planete}}</h5>
-        <h5 class="card-title text-center">Découvreur : {{saturne.decouvreur}}</h5>
-        <h5 class="card-title text-center">Date de découverte : {{saturne.date}}</h5>
-      <h3 class="text-center">Description</h3>
-      <p class="card-text">{{saturne.description}}</p>
+    <br>
+
+    <div class="container">
+      <div class="card mb-3">
+        <img src="{{asset('uploads/photo/' ~ saturne.photo)}}" class="card-img-top"/>
+
+        <div class="card-body">
+          <h5 class="card-title text-center">Planète : {{saturne.planete}}</h5>
+          <h5 class="card-title text-center">Découvreur : {{saturne.decouvreur}}</h5>
+          <h5 class="card-title text-center">Date de découverte : {{saturne.date}}</h5>
+          <h3 class="text-center">Description</h3>
+          <p class="card-text ">{{saturne.description}}</p>
+        </div>
+      </div>
     </div>
-  </div>
 {% endblock %}
