@@ -63,7 +63,7 @@ class PlutonController extends AbstractController
 
     // SINGLE PLUTON
     /**
-     * @Route("/single/pluton/{id}", name="app_single_pluton")
+     * @Route("/single/naines/{nom}", name="app_single_pluton")
      */
     public function single(Pluton $id): Response{
         $pluton = $this->manager->getRepository(Pluton::class)->find($id);

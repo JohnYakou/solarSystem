@@ -101,7 +101,7 @@ class LuneController extends AbstractController
 
     // SINGLE LUNE
     /**
-     * @Route("/single/lune/{id}", name="app_single_lune")
+     * @Route("/single/terre/{nom}", name="app_single_lune")
      */
     public function single(Lune $id): Response{
         $lune = $this->manager->getRepository(Lune::class)->find($id);

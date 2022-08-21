@@ -63,7 +63,7 @@ class SaturneController extends AbstractController
 
     // ----- SINGLE -----
     /**
-     * @Route("/single/saturne/{id}", name="app_single_saturne")
+     * @Route("/single/saturne/{nom}", name="app_single_saturne")
      */
     public function single(Saturne $id): Response{
         $saturne = $this->manager->getRepository(Saturne::class)->find($id);

@@ -63,7 +63,7 @@ class CharonController extends AbstractController
 
     // ----- SINGLE -----
     /**
-     * @Route("/single/charon/{id}", name="app_single_charon")
+     * @Route("/single/pluton/{nom}", name="app_single_charon")
      */
     public function single(Charon $id): Response{
         $charon = $this->manager->getRepository(Charon::class)->find($id);

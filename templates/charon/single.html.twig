@@ -3,11 +3,11 @@
 {% block title %}{{charon.nom}}{% endblock %}
 
 {% block body %}
-  <section style="background-image:url({{asset('image/soloUniverse.jpg')}}); background-size:cover;">
+  <section style="background-image:url({{asset('image/soloUniverse.jpg')}}); background-attachment:fixed;">
 
     <br>
 
-    <h1 class="text-center text-danger">{{charon.nom}}</h1>
+    <h1 class="text-center text-danger"><strong>{{charon.nom}}</strong></h1>
 
     <br>
 
@@ -16,11 +16,14 @@
         <img src="{{asset('uploads/photo/' ~ charon.photo)}}" class="card-img-top"/>
 
         <div class="card-body">
-          <h5 class="card-title text-center">Planète : {{charon.planete}}</h5>
+          {# <h5 class="card-title text-center">Planète : {{charon.planete}}</h5> #}
+          <br>
           <h5 class="card-title text-center">Découvreur : {{charon.decouvreur}}</h5>
           <h5 class="card-title text-center">Date de découverte : {{charon.date}}</h5>
+          <br>
           <h3 class="text-center">Description</h3>
-          <p class="card-text ">{{charon.description}}</p>
+          <br>
+          <p class="card-text ">{{charon.description|nl2br}}</p>
         </div>
       </div>
     </div>

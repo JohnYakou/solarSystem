@@ -63,7 +63,7 @@ class JupiterController extends AbstractController
 
     // ----- SINGLE -----
     /**
-     * @Route("/single/jupiter/{id}", name="app_single_jupiter")
+     * @Route("/single/jupiter/{nom}", name="app_single_jupiter")
      */
     public function single(Jupiter $id): Response{
         $jupiter = $this->manager->getRepository(Jupiter::class)->find($id);

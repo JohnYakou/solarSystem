@@ -3,7 +3,7 @@
 {% block title %}Principaux satellites{% endblock %}
 
 {% block body %}
-<body style="background-image:url({{asset('image/universe.jpg')}}); background-size:cover;">
+<body style="background-image:url({{asset('image/universe.jpg')}}); background-attachment:fixed;">
     <div class='container'>
         <br><br>
 
@@ -29,13 +29,13 @@
 
         <div class="row">
             {% for lune in lune %}
-                <div class="card col-md-5 mx-1 mt-5 card-lune" style="width:16.5rem">
+                <div class="card col-md-5 mx-1 mt-5 card-lune" style="width:20rem">
                     <img class="card-img-top my-3" style="height:350px" src="{{asset('uploads/photo/' ~ lune.photo)}}">
 
                     <div class="card-body">
                         <h5 class="text-center card-title"><strong>{{lune.nom}}</strong></h5>
 
-                        <a class="btn btn-primary text-center d-flex justify-content-evenly" href="{{path('app_single_lune', {id:lune.id})}}">En savoir plus</a>
+                        <a class="btn btn-primary text-center d-flex justify-content-evenly" href="{{path('app_single_lune', {nom:lune.nom})}}">En savoir plus</a>
                     </div>
 
                     {# EDIT ET DELETE #}
@@ -69,13 +69,13 @@
 
         <div class="row">
             {% for mars in mars %}
-                <div class="card col-md-5 mx-1 mt-5 card-mars" style="width:16.5rem">
+                <div class="card col-md-5 mx-1 mt-5 card-mars" style="width:20rem">
                     <img class="card-img-top my-3" style="height:350px" src="{{asset('uploads/photo/' ~ mars.photo)}}">
 
                     <div class="card-body">
                         <h5 class="text-center card-title"><strong>{{mars.nom}}</strong></h5>
 
-                        <a class="btn btn-primary text-center d-flex justify-content-evenly" href="{{path('app_single_mars', {id:mars.id})}}">En savoir plus</a>
+                        <a class="btn btn-primary text-center d-flex justify-content-evenly" href="{{path('app_single_mars', {nom:mars.nom})}}">En savoir plus</a>
                     </div>
 
                     {# EDIT ET DELETE #}
@@ -109,13 +109,13 @@
 
         <div class="row">
             {% for jupiter in jupiter %}
-                <div class="card col-md-5 mx-1 mt-5 card-jupiter" style="width:16.5rem">
+                <div class="card col-md-5 mx-1 mt-5 card-jupiter" style="width:20rem">
                     <img class="card-img-top my-3" style="height:350px" src="{{asset('uploads/photo/' ~ jupiter.photo)}}">
 
                     <div class="card-body">
                         <h5 class="text-center card-title"><strong>{{jupiter.nom}}</strong></h5>
 
-                        <a class="btn btn-primary text-center d-flex justify-content-evenly" href="{{path('app_single_jupiter', {id:jupiter.id})}}">En savoir plus</a>
+                        <a class="btn btn-primary text-center d-flex justify-content-evenly" href="{{path('app_single_jupiter', {nom:jupiter.nom})}}">En savoir plus</a>
                     </div>
 
                     {# EDIT ET DELETE #}
@@ -149,13 +149,13 @@
 
         <div class="row">
             {% for saturne in saturne %}
-                <div class="card col-md-5 mx-1 mt-5 card-saturne" style="width:16.5rem">
+                <div class="card col-md-5 mx-1 mt-5 card-saturne" style="width:20rem">
                     <img class="card-img-top my-3" style="height:350px" src="{{asset('uploads/photo/' ~ saturne.photo)}}">
 
                     <div class="card-body">
                         <h5 class="text-center card-title"><strong>{{saturne.nom}}</strong></h5>
 
-                        <a class="btn btn-primary text-center d-flex justify-content-evenly" href="{{path('app_single_saturne', {id:saturne.id})}}">En savoir plus</a>
+                        <a class="btn btn-primary text-center d-flex justify-content-evenly" href="{{path('app_single_saturne', {nom:saturne.nom})}}">En savoir plus</a>
                     </div>
 
                     {# EDIT ET DELETE #}
@@ -189,13 +189,13 @@
 
         <div class="row">
             {% for uranus in uranus %}
-                <div class="card col-md-5 mx-1 mt-5 card-uranus" style="width:16.5rem">
+                <div class="card col-md-5 mx-1 mt-5 card-uranus" style="width:20rem">
                     <img class="card-img-top my-3" style="height:350px" src="{{asset('uploads/photo/' ~ uranus.photo)}}">
 
                     <div class="card-body">
                         <h5 class="text-center card-title"><strong>{{uranus.nom}}</strong></h5>
 
-                        <a class="btn btn-primary text-center d-flex justify-content-evenly" href="{{path('app_single_uranus', {id:uranus.id})}}">En savoir plus</a>
+                        <a class="btn btn-primary text-center d-flex justify-content-evenly" href="{{path('app_single_uranus', {nom:uranus.nom})}}">En savoir plus</a>
                     </div>
 
                     {# EDIT ET DELETE #}
@@ -229,13 +229,13 @@
 
         <div class="row">
             {% for neptune in neptune %}
-                <div class="card col-md-5 mx-1 mt-5 card-neptune" style="width:16.5rem">
+                <div class="card col-md-5 mx-1 mt-5 card-neptune" style="width:20rem">
                     <img class="card-img-top my-3" style="height:350px" src="{{asset('uploads/photo/' ~ neptune.photo)}}">
 
                     <div class="card-body">
                         <h5 class="text-center card-title"><strong>{{neptune.nom}}</strong></h5>
 
-                        <a class="btn btn-primary text-center d-flex justify-content-evenly" href="{{path('app_single_neptune', {id:neptune.id})}}">En savoir plus</a>
+                        <a class="btn btn-primary text-center d-flex justify-content-evenly" href="{{path('app_single_neptune', {nom:neptune.nom})}}">En savoir plus</a>
                     </div>
 
                     {# EDIT ET DELETE #}
@@ -269,13 +269,13 @@
 
         <div class="row">
             {% for charon in charon %}
-                <div class="card col-md-5 mx-1 mt-5 card-charon" style="width:16.5rem">
+                <div class="card col-md-5 mx-1 mt-5 card-charon" style="width:20rem">
                     <img class="card-img-top my-2" style="height:350px" src="{{asset('uploads/photo/' ~ charon.photo)}}">
 
                     <div class="card-body">
                         <h5 class="text-center card-title"><strong>{{charon.nom}}</strong></h5>
 
-                        <a class="btn btn-primary text-center d-flex justify-content-evenly" href="{{path('app_single_charon', {id:charon.id})}}">En savoir plus</a>
+                        <a class="btn btn-primary text-center d-flex justify-content-evenly" href="{{path('app_single_charon', {nom:charon.nom})}}">En savoir plus</a>
                     </div>
 
                     {# EDIT ET DELETE #}

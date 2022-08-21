@@ -3,7 +3,9 @@
 {% block title %}Planètes du système solaire{% endblock %}
 
 {% block body %}
-<body style="background-image:url({{asset('image/space.webp')}}); background-size:cover;)">
+<body style="background-image:url({{
+    asset('image/universe.jpg')
+  }}); background-attachment:fixed;)">
     <div class='container'>
         <br><br>
 
@@ -13,7 +15,7 @@
         <div class="d-flex justify-content-around">
             <a type="button" class="btn btn-success m-5" href="#roche">Planètes rocheuses</a>
             <a type="button" class="btn btn-success m-5" href="#gaz">Planètes gazeuses</a>
-            <a type="button" class="btn btn-success m-5" href="#pluton">Anciennes planètes</a>
+            <a type="button" class="btn btn-success m-5" href="#naines">Planètes naines</a>
         </div>
 
         {# DEBUT PLANETES ROCHEUSES #}
@@ -27,7 +29,7 @@
                     <div class="card-body">
                         <h5 class="text-center card-title"><strong>{{rocheuse.nom}}</strong></h5>
 
-                        <a class="btn btn-primary text-center d-flex justify-content-evenly" href="{{path('app_single_rocheuse', {id:rocheuse.id})}}">En savoir plus</a>
+                        <a class="btn btn-primary text-center d-flex justify-content-evenly" href="{{path('app_single_rocheuse', {nom:rocheuse.nom})}}">En savoir plus</a>
                     </div>
 
                     {# EDIT ET DELETE #}
@@ -67,7 +69,7 @@
                     <div class="card-body">
                         <h5 class="text-center card-title"><strong>{{gazeuse.nom}}</strong></h5>
 
-                        <a class="btn btn-primary text-center d-flex justify-content-evenly" href="{{path('app_single_gazeuse', {id:gazeuse.id})}}">En savoir plus</a>
+                        <a class="btn btn-primary text-center d-flex justify-content-evenly" href="{{path('app_single_gazeuse', {nom:gazeuse.nom})}}">En savoir plus</a>
                     </div>
 
                     {# EDIT ET DELETE #}
@@ -96,8 +98,8 @@
 
         <br><br>
 
-        {# DEBUT PLUTON #}
-        <h2 id="pluton" class="text-center text-white"><strong>Les anciennes planètes</strong></h2>
+        {# DEBUT PLUTON / PLANETES NAINES #}
+        <h2 id="naines" class="text-center text-white"><strong>Les planètes naines</strong></h2>
 
         <div class="row">
             {% for pluton in pluton %}
@@ -107,7 +109,7 @@
                     <div class="card-body">
                         <h5 class="text-center card-title"><strong>{{pluton.nom}}</strong></h5>
 
-                        <a class="btn btn-primary text-center d-flex justify-content-evenly" href="{{path('app_single_pluton', {id:pluton.id})}}">En savoir plus</a>
+                        <a class="btn btn-primary text-center d-flex justify-content-evenly" href="{{path('app_single_pluton', {nom:pluton.nom})}}">En savoir plus</a>
                     </div>
 
                     {# EDIT ET DELETE #}

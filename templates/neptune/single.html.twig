@@ -3,11 +3,11 @@
 {% block title %}{{neptune.nom}}{% endblock %}
 
 {% block body %}
-  <section style="background-image:url({{asset('image/soloUniverse.jpg')}}); background-size:cover;">
+  <section style="background-image:url({{asset('image/soloUniverse.jpg')}}); background-attachment:fixed;">
 
     <br>
 
-    <h1 class="text-center text-danger">{{neptune.nom}}</h1>
+    <h1 class="text-center text-danger"><strong>{{neptune.nom}}</strong></h1>
 
     <br>
 
@@ -16,11 +16,14 @@
         <img src="{{asset('uploads/photo/' ~ neptune.photo)}}" class="card-img-top"/>
 
         <div class="card-body">
-          <h5 class="card-title text-center">Planète : {{neptune.planete}}</h5>
+          {# <h5 class="card-title text-center">Planète : {{neptune.planete}}</h5> #}
+          <br>
           <h5 class="card-title text-center">Découvreur : {{neptune.decouvreur}}</h5>
           <h5 class="card-title text-center">Date de découverte : {{neptune.date}}</h5>
+          <br>
           <h3 class="text-center">Description</h3>
-          <p class="card-text ">{{neptune.description}}</p>
+          <br>
+          <p class="card-text ">{{neptune.description|nl2br}}</p>
         </div>
       </div>
     </div>

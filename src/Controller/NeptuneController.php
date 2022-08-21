@@ -65,7 +65,7 @@ class NeptuneController extends AbstractController
 
     // ----- SINGLE -----
     /**
-     * @Route("/single/neptune/{id}", name="app_single_neptune")
+     * @Route("/single/neptune/{nom}", name="app_single_neptune")
      */
     public function single(Neptune $id): Response{
         $neptune = $this->manager->getRepository(Neptune::class)->find($id);

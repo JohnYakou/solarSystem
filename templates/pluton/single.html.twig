@@ -3,9 +3,12 @@
 {% block title %}{{pluton.nom}}{% endblock %}
 
 {% block body %}
-  <section style="background-image:url({{asset('image/soloUniverse.jpg')}}); background-size:cover;">
+  <section style="background-image:url({{asset('image/soloUniverse.jpg')}}); background-attachment:fixed;">
+
     <br>
-    <h1 class="text-center text-danger">{{pluton.nom}}</h1>
+
+    <h1 class="text-center text-white">{{pluton.nom}}</h1>
+    
     <br>
 
     <div class="container">
@@ -13,9 +16,12 @@
         <img src="{{asset('uploads/photo/' ~ pluton.photo)}}" class="card-img-top"/>
 
         <div class="card-body">
+          <br>
           <h5 class="card-title text-center">Superficie : {{pluton.superficie}}</h5>
+          <br>
           <h3 class="text-center">Description</h3>
-          <p class="card-text">{{pluton.description}}</p>
+          <br>
+          <p class="card-text">{{pluton.description|nl2br}}</p>
         </div>
       </div>
     </div>

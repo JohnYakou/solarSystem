@@ -85,7 +85,7 @@ class RocheuseController extends AbstractController
 
     // SINGLE ROCHEUSE
     /**
-     * @Route("/single/rocheuse/{id}", name="app_single_rocheuse")
+     * @Route("/single/rocheuse/{nom}", name="app_single_rocheuse")
      */
     public function single(Rocheuse $id): Response{
         $rocheuse = $this->manager->getRepository(Rocheuse::class)->find($id);

@@ -63,7 +63,7 @@ class UranusController extends AbstractController
 
     // ----- SINGLE -----
     /**
-     * @Route("/single/uranus/{id}", name="app_single_uranus")
+     * @Route("/single/uranus/{nom}", name="app_single_uranus")
      */
     public function single(Uranus $id): Response{
         $uranus = $this->manager->getRepository(Uranus::class)->find($id);

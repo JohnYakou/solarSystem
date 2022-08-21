@@ -63,7 +63,7 @@ class MarsController extends AbstractController
 
     // SINGLE MARS
     /**
-     * @Route("/single/mars/{id}", name="app_single_mars")
+     * @Route("/single/mars/{nom}", name="app_single_mars")
      */
     public function single(Mars $id): Response{
         $mars = $this->manager->getRepository(Mars::class)->find($id);

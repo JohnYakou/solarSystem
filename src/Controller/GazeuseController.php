@@ -63,7 +63,7 @@ class GazeuseController extends AbstractController
 
     // SINGLE GAZEUSE
     /**
-     * @Route("/single/gazeuse/{id}", name="app_single_gazeuse")
+     * @Route("/single/gazeuse/{nom}", name="app_single_gazeuse")
      */
     public function single(Gazeuse $id): Response{
         $gazeuse = $this->manager->getRepository(Gazeuse::class)->find($id);
